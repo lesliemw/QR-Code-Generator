@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle, rgba(238,174,202,0.8674020633644083) 39%, rgba(148,187,233,0.8730043042607668) 84%);
+}
+
+/*CSS for entire container*/
+.container {
+    width: 600px;
+    min-height: 400px;
+    padding: 35px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.2);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11);
+    border-radius: 10px;
+}
+
+.container p{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.325);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11);
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+
+.container button{
+    width: 100%;
+    height: 50px;
+    background: rgba(249, 248, 248, 0.65);
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    border: 1px solid rgba(255,255,255,0.325);
+    color: black;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.11);
+    cursor: pointer ;
+    margin: 70px 0;
+    font-weight: 500;
+
+}
+
+/* QR Code Box CSS details*/
+
+.codeBox {
+    width: 200px;
+    border-radius: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 500ms;
+}
+
+.codeBox img{
+    width: 100%;
+    padding: 10px;
+}
+
+#codeBox.show-img {
+    max-height: 300px;
+    margin: 10px auto;
+}
+
+/*Error and animation CSS*/
+.error {
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+/*Responsive design CSS*/
+@media only screen and (max-width:540px) {
+    .container{
+        width:400px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .container{
+        width: 300px;
+    }
+}

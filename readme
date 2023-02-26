@@ -1,0 +1,11 @@
+I created this QR Code Generator by integrating an API from https://goqr.me/api/ to generate a qr code.
+
+When designing the project, I decided to go with a (kind of) glassmorphism theme, using simple html and css to acheive this.
+
+I chose to go with the very popular Poppins font, found on googlefonts.
+
+I added a small bit of responsiveness to the container by adding @media to the CSS. This allowed me to add a smaller width for the container when the screen was less than 540px and 400px in size. 
+
+This project required very little JavaScript. To start off, I used the DOM to set the relevent IDs from my HTML file so that they can be utilized in the JS. I then attached my createQr() function to my container. This is where I atached my API. I pushed this result into the container to show a qr code on the screen when text or a URL was typed into the input field. 
+
+Finally, I wanted an error message of some sort to occur if the user attempted to click the submit button without actually typing anything into the input field. I created an if-else statement in the createQr() function, so if a user typed any sort of text into the input field and submitted, it would generate a QR code. Otherwise, it would send the error animation. For this animation, I used @keyframes so that the input field box would shake if a user tried to do that. 
